@@ -15,12 +15,19 @@ x = 10         # Integer
 y = 3.14       # Float
 name = "Alice" # String
 is_active = True # Boolean
+z = 1 + 2j     # Complex number
 ```
 
-### Type Checking
+### Type Checking and Conversion
 ```python
-print(type(x))        # Output: <class 'int'>
-print(isinstance(x, int)) # Output: True
+# Type checking
+print(type(x))        # <class 'int'>
+print(isinstance(x, int)) # True
+
+# Type conversion
+x = str(123)         # "123"
+y = int("456")       # 456
+z = float("3.14")    # 3.14
 ```
 
 ### Comments
@@ -48,7 +55,8 @@ print(len(s))          # 6
 ```python
 name = "Alice"
 age = 25
-print(f"{name} is {age} years old.") # Alice is 25 years old.
+print(f"{name} is {age} years old.")
+print("{0} is {1} years old.".format(name, age))
 ```
 
 ### String Slicing
@@ -81,6 +89,8 @@ print(t[0])           # 1
 ```python
 d = {"name": "Alice", "age": 25}
 print(d["name"])      # Alice
+print(d.keys())        # dict_keys(['name', 'age'])
+print(d.values())      # dict_values(['Alice', 25])
 ```
 
 ### Sets
@@ -194,6 +204,8 @@ try:
     x = 10 / 0
 except ZeroDivisionError:
     print("Cannot divide by zero!")
+finally:
+    print("Execution completed")
 ```
 
 ---
@@ -365,6 +377,21 @@ for name, age in zip(names, ages):
 ```python
 import cProfile
 cProfile.run('sum(range(1000))')
+```
+
+### Map, Filter, Reduce
+```python
+from functools import reduce
+nums = [1, 2, 3, 4]
+
+# Map
+squared = list(map(lambda x: x**2, nums))
+
+# Filter
+evens = list(filter(lambda x: x % 2 == 0, nums))
+
+# Reduce
+product = reduce(lambda x, y: x * y, nums)
 ```
 
 ---
