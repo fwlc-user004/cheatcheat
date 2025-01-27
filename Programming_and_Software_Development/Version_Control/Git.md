@@ -1,7 +1,6 @@
 
-![The San Juan Mountains are beautiful!](images/git.webp "San Juan Mountains")     
-
 # Git Cheat Sheet 
+![The San Juan Mountains are beautiful!](images/git.webp "San Juan Mountains")     
                              
 ## **Git Configuration**
  
