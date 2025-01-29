@@ -209,11 +209,5 @@ fetchData() {
 
 ---
 
-## 🎯 Useful Links
-- [Angular Official Docs](https://angular.io/docs)
-- [Angular CLI Documentation](https://angular.io/cli)
-- [RxJS Documentation](https://rxjs.dev/)
-
----
 
 
