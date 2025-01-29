@@ -211,12 +211,4 @@ gunicorn -w 4 -b 0.0.0.0:5000 app:app
 
 ---
 
-## 🎯 Useful Links
-- [Flask Official Docs](https://flask.palletsprojects.com/)
-- [Flask Extensions](https://flask.palletsprojects.com/extensions/)
-- [Jinja2 Templating](https://jinja.palletsprojects.com/)
-
----
-
-🚀 **Happy Coding with Flask!** 🎉
 
