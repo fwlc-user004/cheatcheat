@@ -227,12 +227,5 @@ urlpatterns = [
 
 ---
 
-## 🎯 Useful Links
-- [Django Official Docs](https://docs.djangoproject.com/en/stable/)
-- [Django ORM Cheatsheet](https://django-orm-cookbook.readthedocs.io/)
-- [Django Tutorial](https://tutorial.djangogirls.org/en/)
 
----
-
-🚀 **Happy Coding with Django!** 🎉
 
