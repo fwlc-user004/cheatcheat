@@ -1,169 +1,198 @@
+# 🏗️ Data Structures Comprehensive Cheatsheet
+
+## 🔹 Introduction
+Data structures are ways to **store and organize** data efficiently for different use cases. The choice of the right data structure can significantly affect the **performance** of an algorithm.
+
 ---
- # Welcome to Cheat Cheat!
- 
+
+## 🔹 Arrays
+### ✅ Definition:
+A **fixed-size** or **dynamic** collection of elements stored in contiguous memory locations.
+
+### 📌 Operations:
+```python
+arr = [1, 2, 3, 4, 5]  # Create an array
+arr.append(6)  # Add element
+arr.pop()  # Remove last element
+print(arr[2])  # Access element by index
+```
+
+### ⏳ Time Complexity:
+| Operation | Average Case | Worst Case |
+|-----------|------------|------------|
+| Access    | O(1)       | O(1)       |
+| Search    | O(n)       | O(n)       |
+| Insert    | O(1)       | O(n)       |
+| Delete    | O(n)       | O(n)       |
+
 ---
-🚀 Quick Guide: Cheat Sheets for Programmers & Tech Engineers
-In the fast-paced and complex world of technology, having a compact and accessible resource is always beneficial. Cheat sheets are one of the best tools for quickly reviewing essential commands, tips, and techniques across various domains like programming, networking, security, and DevOps.
 
-Here’s a collection of some of the best cheat sheets for you:
-Here we have several Markdown files:
+## 🔹 Linked List
+### ✅ Definition:
+A data structure where **each element (node) contains a reference** to the next node in memory.
 
-# Algorithms and Data Structure
-- [Data structures](https://fwlc-user004.github.io/cheatcheat/docs/Algorithms_and_Data_Structure/Data%20structures.md)
-- [Sorting Algorithms](https://fwlc-user004.github.io/cheatcheat/docs/Algorithms_and_Data_Structure/Sorting%20Algorithms.md)
+### 📌 Types:
+- **Singly Linked List** → Each node points to the next.
+- **Doubly Linked List** → Nodes have pointers to both next and previous.
+- **Circular Linked List** → Last node points to the first node.
 
+### 📌 Implementation (Python):
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
-# Data Science, Machine Learning & AI
+class LinkedList:
+    def __init__(self):
+        self.head = None
+```
 
-## Big Data & Databases
-- [Apache Spark](https://fwlc-user004.github.io/cheatcheat/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/Apache%20Spark.md)
-- [Hadoop](https://fwlc-user004.github.io/cheatcheat/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/Hadoop.md)
-- [SQL & NoSQL](https://fwlc-user004.github.io/cheatcheat/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/SQL%20%26%20NoSQL.md)
-  
-## Data Analysis
-- [Matplotlib & Seaborn](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Data%20Analysis/Matplotlib%20%26%20Seaborn.md)
-- [NumPy](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Data%20Analysis/NumPy.md)
--  [Pandas](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Data%20Analysis/Pandas.md)
+### ⏳ Time Complexity:
+| Operation | Average Case | Worst Case |
+|-----------|------------|------------|
+| Access    | O(n)       | O(n)       |
+| Search    | O(n)       | O(n)       |
+| Insert    | O(1)       | O(1)       |
+| Delete    | O(1)       | O(1)       |
 
-## Deep Learning
--  [Pandas](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Data%20Analysis/Pandas.md)
- -  [Transformers](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Deep%20Learning/CNN%2C%20RNN%2C%20Transformers.md)
- -  [Keras](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Deep%20Learning/Keras.md)
--  [OpenCV](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Deep%20Learning/OpenCV.md)
-  
-## Machine Learning
-- [PyTorch](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Machine%20Learning%20Frameworks/PyTorch.md)
--  [Scikit-Learn](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Machine%20Learning%20Frameworks/Scikit-Learn.md)
--  [TensorFlow](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Machine%20Learning%20Frameworks/TensorFlow.md)
+---
 
+## 🔹 Stacks (LIFO)
+### ✅ Definition:
+A **Last In First Out (LIFO)** data structure where elements are inserted and removed from the **same end**.
 
-# DevOps & Cloud
+### 📌 Operations:
+- **Push** (Insert an element)
+- **Pop** (Remove the top element)
+- **Peek** (View the top element without removing it)
 
-## CI-CD & Automation
--  [Ansible](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/Ansible.md)
-- [GitHub Actions](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/GitHub%20Actions.md)
-- [GitLab CI-CD](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/GitLab%20CI-CD.md)
-- [Jenkins](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/Jenkins.md)
-- [Terraform](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/Terraform.md)
-  
- ## Cloud Services
-- [AWS](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/AWS.md)
-- [Azure](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/Azure.md)
-- [Platform(GCP)](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/Google%20Cloud%20Platform%20(GCP).md)
- 
- ## Containerization & Virtualization
-- [Docker](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Docker.md) 
-- [Kubernetes](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Kubernetes.md)
-- [Virtual Machines](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Virtual%20Machines.md)
-  
- ## Operating_Systems  
- 
- ### Linux
-- [Command_Line](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/Command_Line.md)
-- [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
-- [Networking_in_Linux](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/Networking_in_Linux.md)
-  
-### MacOS
-- [Terminal](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/MacOS/Terminal.md)
-  
-### Windows   
-- [Command_Promp](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Windows/Command_Prompt.md)
-- [PowerShell](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Windows/PowerShell.md)
+### 📌 Implementation:
+```python
+stack = []
+stack.append(1)  # Push
+stack.append(2)
+stack.pop()  # Pop
+print(stack[-1])  # Peek
+```
 
+### ⏳ Time Complexity:
+| Operation | Average Case | Worst Case |
+|-----------|------------|------------|
+| Push      | O(1)       | O(1)       |
+| Pop       | O(1)       | O(1)       |
+| Peek      | O(1)       | O(1)       |
 
- # Ethical Hacking & Penetration Testing
- 
-- [Cloud Security IoT Hacking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cloud%20Security%20%26%20IoT%20Hacking.md)
-- [Cryptography Password Cracking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cryptography%20%26%20Password%20Cracking.md)
-- [Ethical Hacking Labs & CTFs](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Ethical%20Hacking%20Labs%20%26%20CTFs.md)  
-- [Network Security Scanning](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Network%20Security%20Scanning.md)
-- [OSINT (Open Source Intelligence)](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/OSINT%20(Open%20Source%20Intelligence).md)
-- [Cryptography Password Cracking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cryptography%20%26%20Password%20Cracking.md)
-- [Reverse Engineering & Malware Analysis](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Reverse%20Engineering%20%26%20Malware%20Analysis.md)
-- [Web Application & API Security](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Web%20Application%20%26%20API%20Security.md)
+---
 
+## 🔹 Queues (FIFO)
+### ✅ Definition:
+A **First In First Out (FIFO)** data structure where elements are inserted at the **rear** and removed from the **front**.
 
-# Networking & Security
+### 📌 Types:
+- **Simple Queue** → FIFO order.
+- **Circular Queue** → The last position connects to the first.
+- **Priority Queue** → Elements are dequeued based on priority.
+- **Deque (Double-Ended Queue)** → Elements can be added/removed from both ends.
 
-## Cybersecurity
- - [Encryption](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Encryption.md)
- - [Firewalls & Intrusion Detection](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Firewalls%20%26%20Intrusion%20Detection.md)
-- [Kali Linux Tools](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Kali%20Linux%20Tools.md)
-- [Penetration Testing Basics](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Penetration%20Testing%20Basics.md)
+### 📌 Implementation:
+```python
+from collections import deque
+queue = deque()
+queue.append(1)  # Enqueue
+queue.append(2)
+queue.popleft()  # Dequeue
+```
 
-## Networking Basics
-- [HTTP, HTTPS, FTP, SSH, DNS](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Networking%20Basics/HTTP%2C%20HTTPS%2C%20FTP%2C%20SSH%2C%20DNS.md)
-- [OSI Model & TCP-IP](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Networking%20Basics/OSI%20Model%20%26%20TCP-IP.md)
--  [ Subnetting & IPv4/IPv6](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Networking%20Basics/Subnetting%20%26%20IPv4-IPv6.md)
+### ⏳ Time Complexity:
+| Operation | Average Case | Worst Case |
+|-----------|------------|------------|
+| Enqueue   | O(1)       | O(1)       |
+| Dequeue   | O(1)       | O(1)       |
 
-## Networking Tools
-- [Netcat](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/Netcat.md)
-- [OpenVPN](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/OpenVPN.md)
-- [Wireshark](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/Wireshark.md)
-- [iptables](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/iptables.md)
+---
 
+## 🔹 Hash Tables (Dictionaries in Python)
+### ✅ Definition:
+A key-value storage where **keys are hashed** to find their associated values.
 
-# Programming languages
+### 📌 Implementation:
+```python
+hash_table = {}
+hash_table["name"] = "Alice"
+print(hash_table["name"])  # Output: Alice
+```
 
-## Backend-Development
-- [Express.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Express.js.md)
-- [FastAPI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/FastAPI.md)
-- [Flask](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Flask.md)
-- [Laravel](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Laravel.md)
-- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+### ⏳ Time Complexity:
+| Operation | Average Case | Worst Case |
+|-----------|------------|------------|
+| Insert    | O(1)       | O(n)       |
+| Delete    | O(1)       | O(n)       |
+| Search    | O(1)       | O(n)       |
 
-## Database & Query Languages
-- [GraphQL](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/GraphQL.md)
-- [NoSQL (MongoDB, Firebase, Cassandra)](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/NoSQL%20(MongoDB%2C%20Firebase%2C%20Cassandra).md)
-- [Redis](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/Redis.md)
- - [SQL (MySQL, PostgreSQL, SQLite)](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Programming%20languages/Database%20%26%20Query%20Languages/SQL%20(MySQL%2C%20PostgreSQL%2C%20SQLite).md)
+---
 
-## General-Purpose Languages
-- [c#](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/C%23.md)
-- [Go](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Go.md)
-- [Kotlin](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Kotlin.md)
-- [PHP](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/PHP.md)
-- [Pascal](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Pascal.md)
-- [Python](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Python.md)
-- [Ruby](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Ruby.md)
-- [Rust](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Rust.md)
-- [java](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/java.md)
-- [javaScript](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/javaScript.md)
-- [swift](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/swift.md)
-  
-## Low-Level & Systems Programming
-- [Assembly](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/Assembly%20.md)
-- [C++](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/C%2B%2B.md)
-- [C](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/C.md)
+## 🔹 Trees
+### ✅ Definition:
+A **hierarchical data structure** consisting of nodes where each node has a parent and children.
 
-## Scientific & Statistical Computing
-- [Julia](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/Julia.md)
-- [MATLAB](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/MATLAB.md)
-- [R](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/R.md)
+### 📌 Types:
+- **Binary Tree** → Each node has at most 2 children.
+- **Binary Search Tree (BST)** → Left child < Parent < Right child.
+- **AVL Tree** → Self-balancing BST.
+- **Heap** → Specialized tree-based structure.
 
-## Web-Development
-- [Angular](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/Angular.md)
-- [CSS3-FlexboxGrid](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/CSS3-FlexboxGrid.md)
-- [Html5](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/Html5.md)
-- [JavaScript (ES6+)](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/JavaScript%20(ES6%2B).md)
-- [React](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/React.md)
-- [TypeScript](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/TypeScript.md)
+### 📌 Implementation:
+```python
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+```
 
+### ⏳ Time Complexity:
+| Operation | Average Case | Worst Case |
+|-----------|------------|------------|
+| Insert    | O(log n)   | O(n)       |
+| Search    | O(log n)   | O(n)       |
+| Delete    | O(log n)   | O(n)       |
 
-# Software Development
+---
 
-## Software Architecture & Design Principles
-- [DRY, KISS, YAGNI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Software%20Architecture%20%26%20Design%20Principles/DRY%2C%20KISS%2C%20YAGNI.md)
-- [MVC, MVVM](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Software%20Architecture%20%26%20Design%20Principles/MVC%2C%20MVVM.md)
-- [SOLID](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Software%20Architecture%20%26%20Design%20Principles/SOLID.md)
+## 🔹 Graphs
+### ✅ Definition:
+A collection of **nodes (vertices)** connected by **edges**.
 
-## Testing and Debugging
-- [Assertion](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Assertion.md)
-- [Debugging_Tools](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Debugging_Tools.md)
-- [Integration_Testing](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Integration_Testing.md)
-- [Log_Levels](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Log_Levels.md)
- - [Unit_Testing](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Unit_Testing.md)
+### 📌 Types:
+- **Directed Graph (Digraph)** → Edges have direction.
+- **Undirected Graph** → Edges have no direction.
+- **Weighted Graph** → Edges have weights.
 
-## Version_Control
-- [Git](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Version_Control/Git.md)
-- [GitHub-GitLab Advanced Features](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Version_Control/GitHub-GitLab%20Advanced%20Features.md)
+### 📌 Implementation:
+```python
+# Graph using adjacency list
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'D'],
+    'D': ['B', 'C']
+}
+```
+
+### ⏳ Time Complexity:
+| Operation | Adjacency List | Adjacency Matrix |
+|-----------|---------------|-----------------|
+| Add Edge  | O(1)          | O(1)            |
+| Remove Edge | O(1)        | O(1)            |
+| Search    | O(V + E)      | O(V²)           |
+
+---
+
+## 🔹 Data Structures Best Practices
+- **Choose the right data structure** for efficiency.
+- **Use Hash Tables** for fast lookups.
+- **Prefer Trees/Graphs** for hierarchical data.
+- **Use Queues/Stacks** when order matters.
+
+---
