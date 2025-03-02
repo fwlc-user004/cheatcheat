@@ -72,6 +72,7 @@ Here we have several Markdown files:
 
 
  # Ethical Hacking & Penetration Testing
+ 
 - [Cloud Security IoT Hacking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cloud%20Security%20%26%20IoT%20Hacking.md)
 - [Cryptography Password Cracking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cryptography%20%26%20Password%20Cracking.md)
 - [Ethical Hacking Labs & CTFs](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Ethical%20Hacking%20Labs%20%26%20CTFs.md)  
@@ -102,22 +103,22 @@ Here we have several Markdown files:
 - [iptables](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/iptables.md)
 
 
-  # Programming languages
-  
-  ## Backend-Development
+# Programming languages
+
+## Backend-Development
 - [Express.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Express.js.md)
 - [FastAPI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/FastAPI.md)
 - [Flask](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Flask.md)
 - [Laravel](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Laravel.md)
 - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
 
-  ## Database & Query Languages
+## Database & Query Languages
 - [GraphQL](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/GraphQL.md)
 - [NoSQL (MongoDB, Firebase, Cassandra)](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/NoSQL%20(MongoDB%2C%20Firebase%2C%20Cassandra).md)
 - [Redis](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/Redis.md)
  - [SQL (MySQL, PostgreSQL, SQLite)](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Programming%20languages/Database%20%26%20Query%20Languages/SQL%20(MySQL%2C%20PostgreSQL%2C%20SQLite).md)
-   
-  ## General-Purpose Languages
+
+## General-Purpose Languages
 - [c#](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/C%23.md)
 - [Go](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Go.md)
 - [Kotlin](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Kotlin.md)
@@ -129,18 +130,18 @@ Here we have several Markdown files:
 - [java](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/java.md)
 - [javaScript](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/javaScript.md)
 - [swift](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/swift.md)
-- 
-  ## Low-Level & Systems Programming
+  
+## Low-Level & Systems Programming
 - [Assembly](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/Assembly%20.md)
 - [C++](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/C%2B%2B.md)
 - [C](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/C.md)
 
-  ## Scientific & Statistical Computing
+## Scientific & Statistical Computing
 - [Julia](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/Julia.md)
 - [MATLAB](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/MATLAB.md)
 - [R](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/R.md)
 
-  ## Web-Development
+## Web-Development
 - [Angular](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/Angular.md)
 - [CSS3-FlexboxGrid](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/CSS3-FlexboxGrid.md)
 - [Html5](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/Html5.md)
