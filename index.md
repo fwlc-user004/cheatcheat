@@ -55,7 +55,7 @@ Here we have several Markdown files:
  
   - [Terraform](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/Terraform.md)
   - 
- ### Cloud%20Services
+ ### Cloud Services
 - [AWS](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/AWS.md)
    
   - [Azure](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/Azure.md)
@@ -104,8 +104,8 @@ Here we have several Markdown files:
      
    - [Web Application & API Security](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Web%20Application%20%26%20API%20Security.md)
 
-   - 
-## network& security
+
+## network security
 ### Cybersecurity
  - [Encryption](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Encryption.md)
  - [Firewalls & Intrusion Detection](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Firewalls%20%26%20Intrusion%20Detection.md)
@@ -114,10 +114,49 @@ Here we have several Markdown files:
 
 
 ### Networking Basics
-### Networking Tools
-   - [PowerShell](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Encryption.md)
 
+  - [HTTP, HTTPS, FTP, SSH, DNS](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Networking%20Basics/HTTP%2C%20HTTPS%2C%20FTP%2C%20SSH%2C%20DNS.md)
+  - [OSI Model & TCP-IP](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Networking%20Basics/OSI%20Model%20%26%20TCP-IP.md)
+  -  [ Subnetting & IPv4/IPv6](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Networking%20Basics/Subnetting%20%26%20IPv4-IPv6.md)
+
+### Networking Tools
+   - [Netcat](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/Netcat.md)
+- [OpenVPN](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/OpenVPN.md)
+
+  - [Wireshark](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/Wireshark.md)
+
+- [iptables](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Networking%20%26%20Security/Networking%20Tools/iptables.md)
+
+  ## Programming languages
+  ### Backend-Development
+    
+- [Express.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Express.js.md)
+
+  - [FastAPI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/FastAPI.md)
+
+- [Flask](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Flask.md)
+
+ - [Laravel](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Laravel.md)
+
+  - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+
+  ### Database & Query Languages
+- [Express.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/GraphQL.md)
+
+  - [FastAPI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/FastAPI.md)
+
+- [Flask](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Flask.md)
+
+ - [Laravel](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Laravel.md)
+
+  - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+
+  
+  ### General-Purpose Languages
+  ### Low-Level & Systems Programming
+  ### Scientific & Statistical Computing
+  ### Web-Development
 
   
 
-
+## Software Development
