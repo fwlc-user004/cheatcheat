@@ -153,27 +153,99 @@ Here we have several Markdown files:
   ### General-Purpose Languages
 
 - [c#](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/C%23.md)
-- 
-- [Node.s](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
-- 
- - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
- - 
-- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
-- 
-- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
-- 
-- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
-- 
- - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
 
-- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
- - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+- [Go](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Go.md)
+
+ - [Kotlin](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Kotlin.md)
  - 
-- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+- [PHP](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/PHP.md)
+
+- [Pascal](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Pascal.md)
+
+- [Python](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Python.md)
+
+- [Ruby](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Ruby.md)
+
+- [Rust](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Rust.md)
+
+- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/java.md)
+
+- [javaScript](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/javaScript.md)
+
+- [swift](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/swift.md)
+
+
+
   ### Low-Level & Systems Programming
+
+- [Assembly](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/Assembly%20.md)
+
+- [C++](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/C%2B%2B.md)
+
+- [C](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Low-Level%20%26%20Systems%20Programming/C.md)
+
+
   ### Scientific & Statistical Computing
-  ### Web-Development
+
+
+- [Julia](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/Julia.md)
+
+- [MATLAB](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/MATLAB.md)
+
+
+- [R](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Scientific%20%26%20Statistical%20Computing/R.md)
 
   
+  ### Web-Development
+
+- [Angular](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/Angular.md)
+
+- [CSS3-FlexboxGrid](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/CSS3-FlexboxGrid.md)
+
+
+- [Html5](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/Html5.md)
+
+  
+- [JavaScript (ES6+)](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/JavaScript%20(ES6%2B).md)
+
+- [React](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/React.md)
+
+
+- [TypeScript](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Web-Development/TypeScript.md)
+
 
 ## Software Development
+### Software Architecture & Design Principles
+- [DRY, KISS, YAGNI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Software%20Architecture%20%26%20Design%20Principles/DRY%2C%20KISS%2C%20YAGNI.md)
+
+
+- [MVC, MVVM](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Software%20Architecture%20%26%20Design%20Principles/MVC%2C%20MVVM.md)
+
+  
+- [SOLID](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Software%20Architecture%20%26%20Design%20Principles/SOLID.md)
+
+
+### Testing and Debugging
+- [Assertion](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Assertion.md)
+
+
+- [Debugging_Tools](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Debugging_Tools.md)
+
+  
+- [Integration_Testing](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Integration_Testing.md)
+
+  
+- [Log_Levels](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Log_Levels.md)
+
+ - [Unit_Testing](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Testing%20and%20Debugging/Unit_Testing.md)
+
+### Version_Control
+
+- [Git](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Version_Control/Git.md)
+
+  
+- [GitHub-GitLab Advanced Features](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Software%20Development/Version_Control/GitHub-GitLab%20Advanced%20Features.md)
+
+
+
+
