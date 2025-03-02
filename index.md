@@ -116,7 +116,7 @@ Here we have several Markdown files:
 - [NoSQL (MongoDB, Firebase, Cassandra)](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/NoSQL%20(MongoDB%2C%20Firebase%2C%20Cassandra).md)
 - [Redis](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/Redis.md)
  - [SQL (MySQL, PostgreSQL, SQLite)](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Programming%20languages/Database%20%26%20Query%20Languages/SQL%20(MySQL%2C%20PostgreSQL%2C%20SQLite).md)
-
+   
   ## General-Purpose Languages
 - [c#](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/C%23.md)
 - [Go](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/Go.md)
