@@ -16,9 +16,9 @@ Here we have several Markdown files:
 # Data Science, Machine Learning & AI
 
 ## Big Data & Databases
-- [Apache Spark](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/Apache%20Spark.md)
-- [Hadoop](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/Hadoop.md)
-- [SQL & NoSQL](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/SQL%20%26%20NoSQL.md)
+- [Apache Spark](https://fwlc-user004.github.io/cheatcheat/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/Apache%20Spark.md)
+- [Hadoop](https://fwlc-user004.github.io/cheatcheat/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/Hadoop.md)
+- [SQL & NoSQL](https://fwlc-user004.github.io/cheatcheat/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Big%20Data%20%26%20Databases/SQL%20%26%20NoSQL.md)
   
 ## Data Analysis
 - [Matplotlib & Seaborn](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Data%20Science%2C%20Machine%20Learning%20%26%20AI/Data%20Analysis/Matplotlib%20%26%20Seaborn.md)
