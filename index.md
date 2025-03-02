@@ -10,7 +10,7 @@ Here we have several Markdown files:
 
 # Algorithms and Data Structure
 - [Data structures](https://fwlc-user004.github.io/cheatcheat/Algorithms_and_Data_Structure/Data%20structures.md)
-- [Sorting Algorithms](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Algorithms_and_Data_Structure/Sorting%20Algorithms.md)
+- [Sorting Algorithms](https://github.com/fwlc-user004/cheatcheat/Algorithms_and_Data_Structure/Sorting%20Algorithms.md)
 
 
 # Data Science, Machine Learning & AI
