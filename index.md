@@ -56,7 +56,7 @@ Here we have several Markdown files:
   - [Terraform](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/CI-CD%20%26%20Automation/Terraform.md)
   - 
  ### Cloud%20Services
-    - [AWS](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/AWS.md)
+- [AWS](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/AWS.md)
    
   - [Azure](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Cloud%20Services/Azure.md)
  
@@ -64,27 +64,58 @@ Here we have several Markdown files:
  
     
  ## Containerization
-    - [Docker](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Docker.md)
+   - [Docker](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Docker.md)
    
-    - [Kubernetes](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Kubernetes.md)
+   - [Kubernetes](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Kubernetes.md)
 
-    - [Virtual Machines.md](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Virtual%20Machines.md)
+   - [Virtual Machines](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Containerization%20%26%20Virtualization/Virtual%20Machines.md)
  ## Operating_Systems  
  ### Linux
-    - [Command_Line](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/Command_Line.md)
+   - [Command_Line](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/Command_Line.md)
    
-      - [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
+   - [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
 
-      - [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
+   - [Networking_in_Linux](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/Networking_in_Linux.md)
+### mac os
+- [Terminal](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/MacOS/Terminal.md)
+### Windows   
+   - [Command_Promp](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Windows/Command_Prompt.md)
 
-      - [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
+   - [PowerShell](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Windows/PowerShell.md)
 
-      - [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
+ ## Ethical Hacking & Penetration Testing
 
-      - [File_and_Process_Management](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/DevOps%20%26%20Cloud/Operating_Systems/Linux/File_and_Process_Management.md)
+   - [Cloud Security IoT Hacking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cloud%20Security%20%26%20IoT%20Hacking.md)
+   - 
+   - [Cryptography Password Cracking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cryptography%20%26%20Password%20Cracking.md)
+
+   - [Ethical Hacking Labs & CTFs](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Ethical%20Hacking%20Labs%20%26%20CTFs.md)
+
+     
+   - [Network Security Scanning](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Network%20Security%20Scanning.md)
+
+   - [OSINT (Open Source Intelligence)](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/OSINT%20(Open%20Source%20Intelligence).md)
 
 
+   - [Cryptography Password Cracking](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Cryptography%20%26%20Password%20Cracking.md)
 
+   - [Reverse Engineering & Malware Analysis](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Reverse%20Engineering%20%26%20Malware%20Analysis.md)
+
+     
+   - [Web Application & API Security](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Ethical%20Hacking%20%26%20Penetration%20Testing/Web%20Application%20%26%20API%20Security.md)
+
+   - 
+## network& security
+### Cybersecurity
+ - [Encryption](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Encryption.md)
+ - [Firewalls & Intrusion Detection](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Firewalls%20%26%20Intrusion%20Detection.md)
+  - [Kali Linux Tools](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Kali%20Linux%20Tools.md)
+   - [Penetration Testing Basics](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Penetration%20Testing%20Basics.md)
+
+
+### Networking Basics
+### Networking Tools
+   - [PowerShell](https://github.com/fwlc-user004/cheatcheat/blob/ad4e159fc067bc2a2ca07c8171116c50777f2a5e/Networking%20%26%20Security/Cybersecurity/Encryption.md)
 
 
   
