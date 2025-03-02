@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheatSheet - IT & Programming</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #content {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">در حال بارگذاری...</div>
 
+    <script>
+        async function loadMarkdown() {
+            try {
+                // لیست فایل‌های Markdown برای نمایش خودکار
+                const files = [
+                    "algorithms.md",
+                    "ml.md",
+                    "networking.md",
+                    "devops.md",
+                    "security.md"
+                ];
+
+                let content = "<h1>📌 لیست CheatSheetها</h1><ul>";
+                files.forEach(file => {
+                    content += `<li><a href="#" onclick="loadFile('${file}')">${file.replace('.md', '')}</a></li>`;
+                });
+                content += "</ul><div id='md-content'></div>";
+                document.getElementById('content').innerHTML = content;
+            } catch (error) {
+                document.getElementById('content').innerHTML = '<p>خطا در بارگذاری محتوا</p>';
+            }
+        }
+
+        async function loadFile(filename) {
+            const response = await fetch(filename);
+            const text = await response.text();
+            document.getElementById('md-content').innerHTML = marked.parse(text);
+        }
+
+        loadMarkdown();
+    </script>
+</body>
+</html>
