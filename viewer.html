@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CheatSheet Viewer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #content {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+</style>
+</head>
+<body>
+<div id="content">
+<a href="index.html">🔙 بازگشت به لیست</a>
+<hr>
+<div id="md-content">در حال بارگذاری...</div>
+</div>
+ 
+    <script>
+        // گرفتن نام فایل از URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const file = urlParams.get("file");
+ 
+        // بارگذاری Markdown از مسیر داده‌شده
+        async function loadMarkdown() {
+            if (!file) {
+                document.getElementById("md-content").innerHTML = "<p style='color: red;'>❌ فایل مشخص نشده است.</p>";
+                return;
+            }
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error("فایل یافت نشد.");
+                const text = await response.text();
+                document.getElementById("md-content").innerHTML = marked.parse(text);
+            } catch (error) {
+                document.getElementById("md-content").innerHTML = `<p style='color: red;'>❌ خطا در بارگذاری فایل</p>`;
+            }
+        }
+ 
+        loadMarkdown();
+</script>
+</body>
+</html>
