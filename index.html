@@ -38,7 +38,7 @@
     <script>
         async function loadMarkdown() {
             try {
-                const response = await fetch('index.md'); // فایل اصلی مارک‌داون رو لود کن
+                const response = await fetch('README.md'); // فایل اصلی مارک‌داون رو لود کن
                 const text = await response.text();
                 document.getElementById('content').innerHTML = marked.parse(text);
             } catch (error) {
