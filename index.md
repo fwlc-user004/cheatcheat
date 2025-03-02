@@ -141,18 +141,35 @@ Here we have several Markdown files:
   - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
 
   ### Database & Query Languages
-- [Express.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/GraphQL.md)
+- [GraphQL](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/GraphQL.md)
 
-  - [FastAPI](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/FastAPI.md)
+- [NoSQL (MongoDB, Firebase, Cassandra)](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/NoSQL%20(MongoDB%2C%20Firebase%2C%20Cassandra).md)
 
-- [Flask](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Flask.md)
+- [Redis](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/Redis.md)
 
- - [Laravel](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Laravel.md)
-
-  - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+ - [SQL (MySQL, PostgreSQL, SQLite](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Database%20%26%20Query%20Languages/SQL%20(MySQL%2C%20PostgreSQL%2C%20SQLite).md)
 
   
   ### General-Purpose Languages
+
+- [c#](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/General-Purpose%20Languages/C%23.md)
+- 
+- [Node.s](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+- 
+ - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+ - 
+- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+- 
+- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+- 
+- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+- 
+ - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+
+- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+ - [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
+ - 
+- [Node.js](https://github.com/fwlc-user004/cheatcheat/blob/3a22d58da73a8c1eceb8f0877ac9074c0ca30cee/Programming%20languages/Backend-Development/Node.js.md)
   ### Low-Level & Systems Programming
   ### Scientific & Statistical Computing
   ### Web-Development
