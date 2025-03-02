@@ -9,7 +9,7 @@ Here’s a collection of some of the best cheat sheets for you:
 Here we have several Markdown files:
 
 # Algorithms and Data Structure
-- [Data structures](https://fwlc-user004.github.io/cheatcheat/Algorithms_and_Data_Structure/Data%20structures.md)
+- [Data structures](https://fwlc-user004.github.io/cheatcheat/docs/Algorithms_and_Data_Structure/Data%20structures.md)
 - [Sorting Algorithms](https://fwlc-user004.github.io/cheatcheat/Algorithms_and_Data_Structure/Sorting%20Algorithms.md)
 
 
