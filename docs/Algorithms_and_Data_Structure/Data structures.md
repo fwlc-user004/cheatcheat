@@ -1,3 +1,5 @@
+layout: default
+
 # 🏗️ Data Structures Comprehensive Cheatsheet
 
 ## 🔹 Introduction
