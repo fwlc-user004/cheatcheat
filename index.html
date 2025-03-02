@@ -13,7 +13,7 @@
             background-color: #f4f4f4;
         }
         #content {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: white;
             padding: 20px;
@@ -24,47 +24,68 @@
             color: #333;
         }
         pre {
-            background: #333;
+            background: #222;
             color: #fff;
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
         }
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div id="content">در حال بارگذاری...</div>
+    <div id="content">
+        <h1>📌 CheatSheet - IT & Programming</h1>
+        <p>برای مشاهده هر بخش روی عنوان آن کلیک کنید:</p>
+        <ul id="file-list"></ul>
+        <hr>
+        <div id="md-content">⚡ لطفاً یک فایل انتخاب کنید.</div>
+    </div>
 
     <script>
-        async function loadMarkdown() {
-            try {
-                // لیست فایل‌های Markdown برای نمایش خودکار
-                const files = [
-                    "algorithms.md",
-                    "ml.md",
-                    "networking.md",
-                    "devops.md",
-                    "security.md"
-                ];
+        // لیست فایل‌های Markdown (از مسیر docs/)
+        const files = [
+            "docs/algorithms.md",
+            "docs/ml.md",
+            "docs/networking.md",
+            "docs/devops.md",
+            "docs/security.md"
+        ];
 
-                let content = "<h1>📌 لیست CheatSheetها</h1><ul>";
-                files.forEach(file => {
-                    content += `<li><a href="#" onclick="loadFile('${file}')">${file.replace('.md', '')}</a></li>`;
-                });
-                content += "</ul><div id='md-content'></div>";
-                document.getElementById('content').innerHTML = content;
+        // نمایش لیست فایل‌ها
+        const fileList = document.getElementById("file-list");
+        files.forEach(file => {
+            const fileName = file.replace("docs/", "").replace(".md", ""); // حذف پسوند و پوشه
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<a href="#" onclick="loadFile('${file}')">${fileName}</a>`;
+            fileList.appendChild(listItem);
+        });
+
+        // بارگذاری و نمایش محتوای Markdown
+        async function loadFile(filename) {
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) throw new Error("فایل یافت نشد.");
+                const text = await response.text();
+                document.getElementById("md-content").innerHTML = marked.parse(text);
             } catch (error) {
-                document.getElementById('content').innerHTML = '<p>خطا در بارگذاری محتوا</p>';
+                document.getElementById("md-content").innerHTML = `<p style="color: red;">❌ خطا در بارگذاری فایل</p>`;
             }
         }
-
-        async function loadFile(filename) {
-            const response = await fetch(filename);
-            const text = await response.text();
-            document.getElementById('md-content').innerHTML = marked.parse(text);
-        }
-
-        loadMarkdown();
     </script>
 </body>
 </html>
