@@ -1,6 +1,0 @@
-theme: jekyll-theme-midnight
-title: "CheatSheet - IT & Programming"
-description: "مجموعه‌ای از نکات و راهنمای سریع در حوزه برنامه‌نویسی و آی‌تی"
-markdown: kramdown
-plugins:
-  - jekyll-sitemap
