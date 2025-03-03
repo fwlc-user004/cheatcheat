@@ -1,134 +1,86 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CheatSheet - IT & Programming</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-<style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheatSheet - IT & Programming</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <style>
         body {
-
             font-family: Arial, sans-serif;
-
             margin: 0;
-
             padding: 20px;
-
             background-color: #f4f4f4;
-
         }
-
         #content {
-
             max-width: 900px;
-
             margin: auto;
-
             background: white;
-
             padding: 20px;
-
             border-radius: 5px;
-
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
         }
-
         h1, h2, h3 {
-
             color: #333;
-
         }
-
         pre {
-
             background: #222;
-
             color: #fff;
-
             padding: 10px;
-
             border-radius: 5px;
-
             overflow-x: auto;
-
         }
-
         ul {
-
             padding: 0;
-
         }
-
         li {
-
             list-style: none;
-
             margin: 5px 0;
-
         }
-
         a {
-
             text-decoration: none;
-
             color: #007bff;
-
             font-weight: bold;
-
         }
-
         a:hover {
-
             text-decoration: underline;
-
         }
-</style>
+    </style>
 </head>
 <body>
-<div id="content">
-<h1>📌 CheatSheet - IT & Programming</h1>
-<p>برای مشاهده هر بخش روی عنوان آن کلیک کنید:</p>
-<ul id="file-list"></ul>
-</div>
- 
+    <div id="content">
+        <h1>📌 CheatSheet - IT & Programming</h1>
+        <p>برای مشاهده هر بخش روی عنوان آن کلیک کنید:</p>
+        <div id="category-list"></div>
+    </div>
+
     <script>
+        // لیست دسته‌بندی‌ها و فایل‌های Markdown
+        const categories = {
+            "الگوریتم‌ها و ساختمان داده": ["docs/Algorithms_and_Data_Structure/Data structures.md
+", "docs/algorithms/searching.md"],
+            "یادگیری ماشین": ["docs/ml/regression.md", "docs/ml/classification.md"],
+            "شبکه و امنیت": ["docs/networking/firewalls.md", "docs/networking/protocols.md"],
+            "DevOps و Cloud": ["docs/devops/docker.md", "docs/devops/kubernetes.md"],
+            "امنیت سایبری": ["docs/security/penetration_testing.md", "docs/security/encryption.md"]
+        };
 
-        // لیست فایل‌های Markdown (از مسیر docs/)
+        // نمایش لیست دسته‌بندی‌ها و فایل‌ها
+        const categoryList = document.getElementById("category-list");
+        for (const category in categories) {
+            const categoryTitle = document.createElement("h2");
+            categoryTitle.textContent = category;
+            categoryList.appendChild(categoryTitle);
 
-        const files = [
-           
-           "الگوریتم‌ها و ساختمان داده""docs/Algorithms_and_Data_Structure/Data structures.md",
-            "docs/Algorithms_and_Data_Structure/Sorting Algorithms.md",
-     
-            "docs/Algorithms_and_Data_Structure/Data structures.md",
-            "docs/Algorithms_and_Data_Structure/Sorting Algorithms.md",
-            "docs/networking.md",
-
-            "docs/devops.md",
-
-            "docs/security.md"
-
-        ];
- 
-        // نمایش لیست فایل‌ها
-
-        const fileList = document.getElementById("file-list");
-
-        files.forEach(file => {
-
-            const fileName = file.replace("docs/", "").replace(".md", ""); // حذف پسوند و پوشه
-
-            const listItem = document.createElement("li");
-
-            listItem.innerHTML = `<a href="viewer.html?file=${file}">${fileName}</a>`;
-
-            fileList.appendChild(listItem);
-
-        });
-</script>
+            const fileList = document.createElement("ul");
+            categories[category].forEach(file => {
+                const fileName = file.split("/").pop().replace(".md", "");
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<a href="viewer.html?file=${file}">${fileName}</a>`;
+                fileList.appendChild(listItem);
+            });
+            categoryList.appendChild(fileList);
+        }
+    </script>
 </body>
 </html>
-
- 
