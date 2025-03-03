@@ -1,0 +1,183 @@
+
+// لیست دسته‌بندی‌ها، زیر دسته‌بندی‌ها و فایل‌های Markdown بر اساس فایل ارسال‌شده
+const categories = {
+    "Algorithms and Data Structure": {
+        "Data Structures": ["docs/Algorithms_and_Data_Structure/Data_structures.md"],
+        "Sorting Algorithms": ["docs/Algorithms_and_Data_Structure/Sorting_Algorithms.md"]
+    },
+    "Data Science, Machine Learning & AI": {
+        "Big Data and Databases": ["docs/Data_Science_MachineLearning_AI/Big_Data_and_Databases/Apache_Spark.md", "docs/Data_Science_MachineLearning_AI/Big_Data_and_Databases/Hadoop.md", "docs/Data_Science_MachineLearning_AI/Big_Data_and_Databases/SQL_NoSQL.md"],
+        "Data Analysis": ["docs/Data_Science_MachineLearning_AI/Data_Analysis/Matplotlib_Seaborn.md", "docs/Data_Science_MachineLearning_AI/Data_Analysis/NumPy.md", "docs/Data_Science_MachineLearning_AI/Data_Analysis/Pandas.md"],
+        "Deep Learning": ["docs/Data_Science_MachineLearning_AI/Deep_Learning/CNN_RNN_Transformers.md", "docs/Data_Science_MachineLearning_AI/Deep_Learning/Keras.md", "docs/Data_Science_MachineLearning_AI/Deep_Learning/OpenCV.md"],
+        "Machine Learning Frameworks": ["docs/Data_Science_MachineLearning_AI/Machine_Learning_Frameworks/PyTorch.md", "docs/Data_Science_MachineLearning_AI/Machine_Learning_Frameworks/Scikit-Learn.md", "docs/Data_Science_MachineLearning_AI/Machine_Learning_Frameworks/TensorFlow.md"]
+    },
+    "DevOps and Cloud": {
+        "CI/CD and Automation": [
+            "docs/DevOps_and_Cloud/CI-CD_and_Automation/Ansible.md",
+            "docs/DevOps_and_Cloud/CI-CD_and_Automation/GitHub_Actions.md",
+            "docs/DevOps_and_Cloud/CI-CD_and_Automation/GitLab_CI-CD.md",
+            "docs/DevOps_and_Cloud/CI-CD_and_Automation/Jenkins.md",
+            "docs/DevOps_and_Cloud/CI-CD_and_Automation/Terraform.md"
+        ],
+        "Cloud Services": [
+            "docs/DevOps_and_Cloud/Cloud_Services/AWS.md",
+            "docs/DevOps_and_Cloud/Cloud_Services/Azure.md",
+            "docs/DevOps_and_Cloud/Cloud_Services/Google_Cloud_Platform_GCP.md"
+        ],
+        "Containerization and Virtualization": [
+            "docs/DevOps_and_Cloud/Containerization_and_Virtualization/Docker.md",
+            "docs/DevOps_and_Cloud/Containerization_and_Virtualization/Kubernetes.md",
+            "docs/DevOps_and_Cloud/Containerization_and_Virtualization/Virtual_Machines.md"
+        ]
+    },
+    "Operating Systems": {
+        "Linux": [
+            "docs/DevOps_and_Cloud/Operating_Systems/Linux/Command_Line.md",
+            "docs/DevOps_and_Cloud/Operating_Systems/Linux/File_and_Process_Management.md",
+            "docs/DevOps_and_Cloud/Operating_Systems/Linux/Networking_in_Linux.md"
+        ],
+        "MacOS": [
+            "docs/DevOps_and_Cloud/Operating_Systems/MacOS/Terminal.md"
+        ],
+        "Windows": [
+            "docs/DevOps_and_Cloud/Operating_Systems/Windows/Command_Prompt.md",
+            "docs/DevOps_and_Cloud/Operating_Systems/Windows/PowerShell.md"
+        ]
+    },
+    "Ethical Hacking and Penetration Testing": {
+        "Security Topics": [
+            "docs/Ethical_Hacking_and_Penetration_Testing/Cloud_Security_IoT_Hacking.md",
+            "docs/Ethical_Hacking_and_Penetration_Testing/Cryptography_Password_Cracking.md",
+            "docs/Ethical_Hacking_and_Penetration_Testing/Ethical_Hacking_Labs_CTFs.md",
+            "docs/Ethical_Hacking_and_Penetration_Testing/Network_Security_Scanning.md",
+            "docs/Ethical_Hacking_and_Penetration_Testing/OSINT.md",
+            "docs/Ethical_Hacking_and_Penetration_Testing/Reverse_Engineering_Malware_Analysis.md",
+            "docs/Ethical_Hacking_and_Penetration_Testing/Web_Application_API_Security.md"
+        ]
+    },
+    "Networking and Security": {
+        "Cybersecurity": [
+            "docs/Networking_and_Security/Cybersecurity/Encryption.md",
+            "docs/Networking_and_Security/Cybersecurity/Firewalls_Intrusion_Detection.md",
+            "docs/Networking_and_Security/Cybersecurity/Kali_Linux_Tools.md",
+            "docs/Networking_and_Security/Cybersecurity/Penetration_Testing_Basics.md"
+        ],
+        "Networking Basics": [
+            "docs/Networking_and_Security/Networking_Basics/HTTP_HTTPS_FTP_SSH_DNS.md",
+            "docs/Networking_and_Security/Networking_Basics/OSI_Model_TCP-IP.md",
+            "docs/Networking_and_Security/Networking_Basics/Subnetting_IPv4-IPv6.md"
+        ],
+        "Networking Tools": [
+            "docs/Networking_and_Security/Networking_Tools/Netcat.md",
+            "docs/Networking_and_Security/Networking_Tools/OpenVPN.md",
+            "docs/Networking_and_Security/Networking_Tools/Wireshark.md",
+            "docs/Networking_and_Security/Networking_Tools/iptables.md"
+        ]
+    },
+    "Programming Languages": {
+        "Backend Development": [
+            "docs/Programming_Languages/Backend_Development/Express.js.md",
+            "docs/Programming_Languages/Backend_Development/FastAPI.md",
+            "docs/Programming_Languages/Backend_Development/Flask.md",
+            "docs/Programming_Languages/Backend_Development/Laravel.md",
+            "docs/Programming_Languages/Backend_Development/Node.js.md"
+        ],
+        "Database and Query Languages": [
+            "docs/Programming_Languages/Database_and_Query_Languages/GraphQL.md",
+            "docs/Programming_Languages/Database_and_Query_Languages/NoSQL_MongoDB_Firebase_Cassandra.md",
+            "docs/Programming_Languages/Database_and_Query_Languages/Redis.md",
+            "docs/Programming_Languages/Database_and_Query_Languages/SQL_MySQL_PostgreSQL_SQLite.md"
+        ],
+        "General Purpose Languages": [
+            "docs/Programming_Languages/General_Purpose_Languages/Csharp.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Go.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Kotlin.md",
+            "docs/Programming_Languages/General_Purpose_Languages/PHP.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Pascal.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Python.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Ruby.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Rust.md",
+            "docs/Programming_Languages/General_Purpose_Languages/java.md",
+            "docs/Programming_Languages/General_Purpose_Languages/javaScript.md",
+            "docs/Programming_Languages/General_Purpose_Languages/swift.md"
+        ],
+        "Low Level and Systems Programming": [
+            "docs/Programming_Languages/Low_Level_and_Systems_Programming/Assembly.md",
+            "docs/Programming_Languages/Low_Level_and_Systems_Programming/CPlusPlus.md",
+            "docs/Programming_Languages/Low_Level_and_Systems_Programming/C.md"
+        ],
+        "Scientific and Statistical Computing": [
+            "docs/Programming_Languages/Scientific_and_Statistical_Computing/Julia.md",
+            "docs/Programming_Languages/Scientific_and_Statistical_Computing/MATLAB.md",
+            "docs/Programming_Languages/Scientific_and_Statistical_Computing/R.md"
+        ],
+        "Web Development": [
+            "docs/Programming_Languages/Web_Development/Angular.md",
+            "docs/Programming_Languages/Web_Development/CSS3-FlexboxGrid.md",
+            "docs/Programming_Languages/Web_Development/Html5.md",
+            "docs/Programming_Languages/Web_Development/JavaScriptES6.md",
+            "docs/Programming_Languages/Web_Development/React.md",
+            "docs/Programming_Languages/Web_Development/TypeScript.md"
+        ]
+    },
+    "Software Development": {
+        "Software Architecture and Design Principles": [
+            "docs/Software_Development/Software_Architecture_and_Design_Principles/DRY_KISS_YAGNI.md",
+            "docs/Software_Development/Software_Architecture_and_Design_Principles/MVC_MVVM.md",
+            "docs/Software_Development/Software_Architecture_and_Design_Principles/SOLID.md"
+        ],
+        "Testing and Debugging": [
+            "docs/Software_Development/Testing_and_Debugging/Assertion.md",
+            "docs/Software_Development/Testing_and_Debugging/Debugging_Tools.md",
+            "docs/Software_Development/Testing_and_Debugging/Integration_Testing.md",
+            "docs/Software_Development/Testing_and_Debugging/Log_Levels.md",
+            "docs/Software_Development/Testing_and_Debugging/Unit_Testing.md"
+        ],
+        "Version Control": [
+            "docs/Software_Development/Version_Control/Git.md",
+            "docs/Software_Development/Version_Control/GitHub-GitLab_Advanced_Features.md"
+        ]
+    }
+
+};
+
+// نمایش لیست دسته‌بندی‌ها به عنوان ساب‌منوهای چندلایه
+const categoryList = document.getElementById("category-list");
+for (const category in categories) {
+    const categoryItem = document.createElement("li");
+    const categoryLink = document.createElement("a");
+    categoryLink.textContent = category;
+    categoryLink.href = "#";
+    categoryLink.onclick = function () {
+        const subMenu = this.nextElementSibling;
+        subMenu.style.display = (subMenu.style.display === "none" || subMenu.style.display === "") ? "block" : "none";
+    };
+    categoryItem.appendChild(categoryLink);
+
+    const subMenu = document.createElement("ul");
+    subMenu.classList.add("subcategory");
+    for (const subcategory in categories[category]) {
+        const subCategoryItem = document.createElement("li");
+        const subCategoryLink = document.createElement("a");
+        subCategoryLink.textContent = subcategory;
+        subCategoryLink.href = "#";
+        subCategoryLink.onclick = function () {
+            const subSubMenu = this.nextElementSibling;
+            subSubMenu.style.display = (subSubMenu.style.display === "none" || subSubMenu.style.display === "") ? "block" : "none";
+        };
+        subCategoryItem.appendChild(subCategoryLink);
+
+        const subSubMenu = document.createElement("ul");
+        subSubMenu.classList.add("sub-subcategory");
+        categories[category][subcategory].forEach(file => {
+            const fileName = file.split("/").pop().replace(".md", "");
+            const fileItem = document.createElement("li");
+            fileItem.innerHTML = `<a href="viewer.html?file=${file}">${fileName}</a>`;
+            subSubMenu.appendChild(fileItem);
+        });
+        subCategoryItem.appendChild(subSubMenu);
+        subMenu.appendChild(subCategoryItem);
+    }
+    categoryItem.appendChild(subMenu);
+    categoryList.appendChild(categoryItem);
+}
