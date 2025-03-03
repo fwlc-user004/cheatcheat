@@ -1,52 +1,7 @@
 
 // لیست دسته‌بندی‌ها، زیر دسته‌بندی‌ها و فایل‌های Markdown بر اساس فایل ارسال‌شده
 const categories = {
-      "Programming Languages": {
-        "Backend Development": [
-            "docs/Programming_Languages/Backend_Development/Express.js.md",
-            "docs/Programming_Languages/Backend_Development/FastAPI.md",
-            "docs/Programming_Languages/Backend_Development/Flask.md",
-            "docs/Programming_Languages/Backend_Development/Laravel.md",
-            "docs/Programming_Languages/Backend_Development/Node.js.md"
-        ],
-        "Database and Query Languages": [
-            "docs/Programming_Languages/Database_and_Query_Languages/GraphQL.md",
-            "docs/Programming_Languages/Database_and_Query_Languages/NoSQL_MongoDB_Firebase_Cassandra.md",
-            "docs/Programming_Languages/Database_and_Query_Languages/Redis.md",
-            "docs/Programming_Languages/Database_and_Query_Languages/SQL_MySQL_PostgreSQL_SQLite.md"
-        ],
-        "General Purpose Languages": [
-            "docs/Programming_Languages/General_Purpose_Languages/Csharp.md",
-            "docs/Programming_Languages/General_Purpose_Languages/Go.md",
-            "docs/Programming_Languages/General_Purpose_Languages/Kotlin.md",
-            "docs/Programming_Languages/General_Purpose_Languages/PHP.md",
-            "docs/Programming_Languages/General_Purpose_Languages/Pascal.md",
-            "docs/Programming_Languages/General_Purpose_Languages/Python.md",
-            "docs/Programming_Languages/General_Purpose_Languages/Ruby.md",
-            "docs/Programming_Languages/General_Purpose_Languages/Rust.md",
-            "docs/Programming_Languages/General_Purpose_Languages/java.md",
-            "docs/Programming_Languages/General_Purpose_Languages/javaScript.md",
-            "docs/Programming_Languages/General_Purpose_Languages/swift.md"
-        ],
-        "Low Level and Systems Programming": [
-            "docs/Programming_Languages/Low_Level_and_Systems_Programming/Assembly.md",
-            "docs/Programming_Languages/Low_Level_and_Systems_Programming/CPlusPlus.md",
-            "docs/Programming_Languages/Low_Level_and_Systems_Programming/C.md"
-        ],
-        "Scientific and Statistical Computing": [
-            "docs/Programming_Languages/Scientific_and_Statistical_Computing/Julia.md",
-            "docs/Programming_Languages/Scientific_and_Statistical_Computing/MATLAB.md",
-            "docs/Programming_Languages/Scientific_and_Statistical_Computing/R.md"
-        ],
-        "Web Development": [
-            "docs/Programming_Languages/Web_Development/Angular.md",
-            "docs/Programming_Languages/Web_Development/CSS3-FlexboxGrid.md",
-            "docs/Programming_Languages/Web_Development/Html5.md",
-            "docs/Programming_Languages/Web_Development/JavaScriptES6.md",
-            "docs/Programming_Languages/Web_Development/React.md",
-            "docs/Programming_Languages/Web_Development/TypeScript.md"
-        ]
-    },
+  const categories = {
     "Algorithms and Data Structure": {
         "Data Structures": ["docs/Algorithms_and_Data_Structure/Data_structures.md"],
         "Sorting Algorithms": ["docs/Algorithms_and_Data_Structure/Sorting_Algorithms.md"]
@@ -120,7 +75,52 @@ const categories = {
             "docs/Networking_and_Security/Networking_Tools/iptables.md"
         ]
     },
-  
+    "Programming Languages": {
+        "Backend Development": [
+            "docs/Programming_Languages/Backend_Development/Express.js.md",
+            "docs/Programming_Languages/Backend_Development/FastAPI.md",
+            "docs/Programming_Languages/Backend_Development/Flask.md",
+            "docs/Programming_Languages/Backend_Development/Laravel.md",
+            "docs/Programming_Languages/Backend_Development/Node.js.md"
+        ],
+        "Database and Query Languages": [
+            "docs/Programming_Languages/Database_and_Query_Languages/GraphQL.md",
+            "docs/Programming_Languages/Database_and_Query_Languages/NoSQL_MongoDB_Firebase_Cassandra.md",
+            "docs/Programming_Languages/Database_and_Query_Languages/Redis.md",
+            "docs/Programming_Languages/Database_and_Query_Languages/SQL_MySQL_PostgreSQL_SQLite.md"
+        ],
+        "General Purpose Languages": [
+            "docs/Programming_Languages/General_Purpose_Languages/Csharp.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Go.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Kotlin.md",
+            "docs/Programming_Languages/General_Purpose_Languages/PHP.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Pascal.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Python.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Ruby.md",
+            "docs/Programming_Languages/General_Purpose_Languages/Rust.md",
+            "docs/Programming_Languages/General_Purpose_Languages/java.md",
+            "docs/Programming_Languages/General_Purpose_Languages/javaScript.md",
+            "docs/Programming_Languages/General_Purpose_Languages/swift.md"
+        ],
+        "Low Level and Systems Programming": [
+            "docs/Programming_Languages/Low_Level_and_Systems_Programming/Assembly.md",
+            "docs/Programming_Languages/Low_Level_and_Systems_Programming/CPlusPlus.md",
+            "docs/Programming_Languages/Low_Level_and_Systems_Programming/C.md"
+        ],
+        "Scientific and Statistical Computing": [
+            "docs/Programming_Languages/Scientific_and_Statistical_Computing/Julia.md",
+            "docs/Programming_Languages/Scientific_and_Statistical_Computing/MATLAB.md",
+            "docs/Programming_Languages/Scientific_and_Statistical_Computing/R.md"
+        ],
+        "Web Development": [
+            "docs/Programming_Languages/Web_Development/Angular.md",
+            "docs/Programming_Languages/Web_Development/CSS3-FlexboxGrid.md",
+            "docs/Programming_Languages/Web_Development/Html5.md",
+            "docs/Programming_Languages/Web_Development/JavaScriptES6.md",
+            "docs/Programming_Languages/Web_Development/React.md",
+            "docs/Programming_Languages/Web_Development/TypeScript.md"
+        ]
+    },
     "Software Development": {
         "Software Architecture and Design Principles": [
             "docs/Software_Development/Software_Architecture_and_Design_Principles/DRY_KISS_YAGNI.md",
