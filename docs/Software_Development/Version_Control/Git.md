@@ -1,252 +1,188 @@
+# Git Cheat Sheet
 
-# Git Cheat Sheet 
-![The San Juan Mountains are beautiful!](images/git.webp "San Juan Mountains")     
-                             
-## **Git Configuration**
- 
-### Set User Details
-```bash
-git config --global user.name <name>
-git config --global user.email <email>
-```
-Define the author name and email to be used for all commits by the current user.
- 
-### Create Git Aliases
-```bash
-git config --global alias.<alias-name> <git-command>
-```
-Create shortcuts for Git commands (e.g., `alias.glog "log --graph --oneline"`).
- 
-### Set Default Editor
-```bash
-git config --system core.editor <editor>
-```
-Set the default editor for all users on the machine (e.g., `vi`).
- 
-### Edit Global Config
-```bash
-git config --global --edit
-```
-Open the global configuration file for manual editing.
- 
----
- 
-## **Git Basics**
- 
-### Initialize a Repository
-```bash
-git init <directory>
-```
-Create an empty Git repository in the specified directory. Run without arguments to initialize the current directory.
- 
-### Clone a Repository
-```bash
-git clone <repo>
-```
-Clone a repository located at `<repo>` onto your local machine.
- 
----
- 
-## **Staging and Committing Changes**
- 
-### Stage Changes
-```bash
-git add <file>
-git add <directory>
-```
-Stage specific files or all changes within a directory.
- 
-### Commit Changes
-```bash
-git commit -m "<message>"
-```
-Commit the staged snapshot with the specified message.
- 
-### Amend Last Commit
-```bash
-git commit --amend
-```
-Replace the last commit with the staged changes and last commit combined.
- 
----
- 
-## **Inspecting History**
- 
-### View Commit History
-```bash
-git log
-```
-Display the commit history using the default format.
- 
-### Simplify Output
-```bash
-git log --oneline
-```
-Condense each commit to a single line.
- 
-### Graphical Log
-```bash
-git log --graph --decorate
-```
-Draw a text-based graph of commits.
- 
-### Filter Log by Author
-```bash
-git log --author="<pattern>"
-```
-Search for commits by a specific author.
- 
-### Search Commit Messages
-```bash
-git log --grep="<pattern>"
-```
-Find commits with messages matching a specific pattern.
- 
----
- 
-## **Undoing Changes**
- 
-### Unstage a File
-```bash
-git reset <file>
-```
-Remove a file from the staging area without overwriting changes.
- 
-### Discard Changes in Working Directory
-```bash
-git checkout -- <file>
-```
-Discard all changes in the specified file (irreversible).
- 
-### Reset to Previous Commit
-```bash
-git reset --hard <commit>
-```
-Reset the working directory and staging area to the specified commit.
- 
----
- 
-## **Branching and Merging**
- 
-### Create a Branch
-```bash
-git branch <branch>
-```
-Create a new branch.
- 
-### Switch Branches
-```bash
-git checkout <branch>
-git switch <branch>
-```
-Switch to an existing branch.
- 
-### Merge Branches
-```bash
-git merge <branch>
-```
-Merge the specified branch into the current branch.
- 
-### Rebase Branch
-```bash
-git rebase <base>
-```
-Rebase the current branch onto `<base>`.
- 
----
- 
-## **Remote Repositories**
- 
-### Add a Remote
-```bash
-git remote add <name> <url>
-```
-Create a new connection to a remote repository.
- 
-### Fetch Changes
-```bash
-git fetch <remote>
-```
-Fetch changes from a remote repository.
- 
-### Pull Updates
-```bash
-git pull <remote>
-```
-Fetch and merge changes from the specified remote repository.
- 
-### Push Changes
-```bash
-git push <remote> <branch>
-```
-Push commits to the specified branch in the remote repository.
- 
----
- 
-## **Tagging**
- 
-### Create a Tag
-```bash
-git tag <tag>
-```
-Create a lightweight tag.
- 
-### Annotated Tag
-```bash
-git tag -a <tag> -m "<message>"
-```
-Create an annotated tag with a message.
- 
-### Push Tags
-```bash
-git push <remote> --tags
-```
-Push tags to the remote repository.
- 
----
- 
-## **Rewriting History**
- 
-### Interactive Rebase
-```bash
-git rebase -i <base>
-```
-Interactively rebase the current branch onto `<base>`.
- 
-### Amend a Commit
-```bash
-git commit --amend
-```
-Modify the most recent commit.
- 
----
- 
-## **Stashing**
- 
-### Save Work in Progress
-```bash
-git stash
-```
-Save changes for later use.
- 
-### Apply Stashed Changes
-```bash
-git stash apply
-```
-Apply changes without removing them from the stash.
- 
-### Drop a Stash
-```bash
-git stash drop
-```
-Remove a specific stash entry.
- 
----
- 
-## **Additional Tips**
- 
-- **Use Aliases:** Create shortcuts for frequently used commands.
-- **Pull Before Push:** Always pull changes from the remote branch before pushing to avoid conflicts.
-- **Clean Up:** Use `git clean` to remove untracked files from your working directory.
- 
-For more information, visit [Atlassian Git Tutorials](http://atlassian.com/git).
+## Basic Setup
+- **Configure Git (Set Username & Email)**
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "your.email@example.com"
+  ```
+- **Check Configuration**
+  ```bash
+  git config --list
+  ```
+
+## Creating and Cloning Repositories
+- **Initialize a new repository**
+  ```bash
+  git init
+  ```
+- **Clone an existing repository**
+  ```bash
+  git clone <repository-url>
+  ```
+
+## Working with Files
+- **Check the status of your working directory**
+  ```bash
+  git status
+  ```
+- **Track a new file**
+  ```bash
+  git add <file>
+  ```
+- **Track all files**
+  ```bash
+  git add .
+  ```
+- **Commit changes with a message**
+  ```bash
+  git commit -m "Your commit message"
+  ```
+- **Commit changes with all modified files**
+  ```bash
+  git commit -a -m "Your commit message"
+  ```
+
+## Branching and Merging
+- **Create a new branch**
+  ```bash
+  git branch <branch-name>
+  ```
+- **List all branches**
+  ```bash
+  git branch
+  ```
+- **Switch to another branch**
+  ```bash
+  git checkout <branch-name>
+  ```
+- **Create and switch to a new branch**
+  ```bash
+  git checkout -b <branch-name>
+  ```
+- **Merge a branch into the current branch**
+  ```bash
+  git merge <branch-name>
+  ```
+- **Delete a branch**
+  ```bash
+  git branch -d <branch-name>
+  ```
+
+## Remote Repositories
+- **Add a remote repository**
+  ```bash
+  git remote add origin <repository-url>
+  ```
+- **View remote repositories**
+  ```bash
+  git remote -v
+  ```
+- **Fetch latest changes from remote**
+  ```bash
+  git fetch
+  ```
+- **Pull latest changes and merge**
+  ```bash
+  git pull origin <branch-name>
+  ```
+- **Push changes to remote**
+  ```bash
+  git push origin <branch-name>
+  ```
+
+## Undoing Changes
+- **Undo changes in working directory**
+  ```bash
+  git checkout -- <file>
+  ```
+- **Reset staged changes**
+  ```bash
+  git reset HEAD <file>
+  ```
+- **Revert a commit**
+  ```bash
+  git revert <commit-hash>
+  ```
+- **Hard reset to a previous commit**
+  ```bash
+  git reset --hard <commit-hash>
+  ```
+
+## Stashing Changes
+- **Stash current changes**
+  ```bash
+  git stash
+  ```
+- **List stashes**
+  ```bash
+  git stash list
+  ```
+- **Apply latest stash**
+  ```bash
+  git stash apply
+  ```
+- **Apply and remove latest stash**
+  ```bash
+  git stash pop
+  ```
+
+## Git Logs and History
+- **View commit history**
+  ```bash
+  git log
+  ```
+- **Compact commit history (one-liner)**
+  ```bash
+  git log --oneline --graph --decorate
+  ```
+- **Show changes in a commit**
+  ```bash
+  git show <commit-hash>
+  ```
+
+## Tagging
+- **Create a tag**
+  ```bash
+  git tag <tag-name>
+  ```
+- **Push tag to remote**
+  ```bash
+  git push origin <tag-name>
+  ```
+- **List all tags**
+  ```bash
+  git tag
+  ```
+- **Delete a tag locally**
+  ```bash
+  git tag -d <tag-name>
+  ```
+- **Delete a tag from remote**
+  ```bash
+  git push --delete origin <tag-name>
+  ```
+
+## Advanced Commands
+- **Rebase a branch**
+  ```bash
+  git rebase <branch-name>
+  ```
+- **Squash commits**
+  ```bash
+  git rebase -i HEAD~<number-of-commits>
+  ```
+- **Cherry-pick a commit**
+  ```bash
+  git cherry-pick <commit-hash>
+  ```
+
+## Aliases for Efficiency
+- **Create a shortcut for a long command**
+  ```bash
+  git config --global alias.co checkout
+  ```
+- **List configured aliases**
+  ```bash
+  git config --get-regexp alias
+  
