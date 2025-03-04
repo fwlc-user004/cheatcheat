@@ -175,6 +175,8 @@
             categoryLink.textContent = category;
             categoryLink.href = "#";
             categoryLink.onclick = function () {
+            event.preventDefault(); 
+
                 const subMenu = this.nextElementSibling;
                 subMenu.style.display = (subMenu.style.display === "none" || subMenu.style.display === "") ? "block" : "none";
             };
@@ -188,6 +190,7 @@
                 subCategoryLink.textContent = subcategory;
                 subCategoryLink.href = "#";
                 subCategoryLink.onclick = function () {
+                     event.preventDefault();
                     const subSubMenu = this.nextElementSibling;
                     subSubMenu.style.display = (subSubMenu.style.display === "none" || subSubMenu.style.display === "") ? "block" : "none";
                 };
