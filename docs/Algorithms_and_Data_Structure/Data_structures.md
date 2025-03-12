@@ -1,6 +1,4 @@
-layout: default
-
-# 🏗️ Data Structures Comprehensive Cheatsheet
+# 🏷️ Data Structures Comprehensive Cheatsheet
 
 ## 🔹 Introduction
 Data structures are ways to **store and organize** data efficiently for different use cases. The choice of the right data structure can significantly affect the **performance** of an algorithm.
@@ -19,13 +17,19 @@ arr.pop()  # Remove last element
 print(arr[2])  # Access element by index
 ```
 
-### ⏳ Time Complexity:
+### ⌛ Time Complexity:
 | Operation | Average Case | Worst Case |
 |-----------|------------|------------|
 | Access    | O(1)       | O(1)       |
 | Search    | O(n)       | O(n)       |
 | Insert    | O(1)       | O(n)       |
 | Delete    | O(n)       | O(n)       |
+
+### ✅ Pros & Cons:
+| Pros | Cons |
+|------|------|
+| Fast access by index (O(1)) | Insertion and deletion can be expensive (O(n)) |
+| Memory-efficient | Fixed size (for static arrays) |
 
 ---
 
@@ -50,7 +54,7 @@ class LinkedList:
         self.head = None
 ```
 
-### ⏳ Time Complexity:
+### ⌛ Time Complexity:
 | Operation | Average Case | Worst Case |
 |-----------|------------|------------|
 | Access    | O(n)       | O(n)       |
@@ -58,59 +62,11 @@ class LinkedList:
 | Insert    | O(1)       | O(1)       |
 | Delete    | O(1)       | O(1)       |
 
----
-
-## 🔹 Stacks (LIFO)
-### ✅ Definition:
-A **Last In First Out (LIFO)** data structure where elements are inserted and removed from the **same end**.
-
-### 📌 Operations:
-- **Push** (Insert an element)
-- **Pop** (Remove the top element)
-- **Peek** (View the top element without removing it)
-
-### 📌 Implementation:
-```python
-stack = []
-stack.append(1)  # Push
-stack.append(2)
-stack.pop()  # Pop
-print(stack[-1])  # Peek
-```
-
-### ⏳ Time Complexity:
-| Operation | Average Case | Worst Case |
-|-----------|------------|------------|
-| Push      | O(1)       | O(1)       |
-| Pop       | O(1)       | O(1)       |
-| Peek      | O(1)       | O(1)       |
-
----
-
-## 🔹 Queues (FIFO)
-### ✅ Definition:
-A **First In First Out (FIFO)** data structure where elements are inserted at the **rear** and removed from the **front**.
-
-### 📌 Types:
-- **Simple Queue** → FIFO order.
-- **Circular Queue** → The last position connects to the first.
-- **Priority Queue** → Elements are dequeued based on priority.
-- **Deque (Double-Ended Queue)** → Elements can be added/removed from both ends.
-
-### 📌 Implementation:
-```python
-from collections import deque
-queue = deque()
-queue.append(1)  # Enqueue
-queue.append(2)
-queue.popleft()  # Dequeue
-```
-
-### ⏳ Time Complexity:
-| Operation | Average Case | Worst Case |
-|-----------|------------|------------|
-| Enqueue   | O(1)       | O(1)       |
-| Dequeue   | O(1)       | O(1)       |
+### ✅ Pros & Cons:
+| Pros | Cons |
+|------|------|
+| Dynamic size | Higher memory usage due to pointers |
+| Fast insertion/deletion | Slower access time (O(n)) |
 
 ---
 
@@ -125,12 +81,22 @@ hash_table["name"] = "Alice"
 print(hash_table["name"])  # Output: Alice
 ```
 
-### ⏳ Time Complexity:
+### ⌛ Time Complexity:
 | Operation | Average Case | Worst Case |
 |-----------|------------|------------|
 | Insert    | O(1)       | O(n)       |
 | Delete    | O(1)       | O(n)       |
 | Search    | O(1)       | O(n)       |
+
+### 📌 Collision Handling Techniques:
+- **Chaining** → Store multiple values in the same bucket.
+- **Open Addressing** → Find another available slot.
+
+### ✅ Pros & Cons:
+| Pros | Cons |
+|------|------|
+| Fast lookups (O(1) in average) | Not memory-efficient |
+| Ideal for key-value mapping | Worst-case performance can be O(n) |
 
 ---
 
@@ -153,12 +119,18 @@ class Node:
         self.val = key
 ```
 
-### ⏳ Time Complexity:
+### ⌛ Time Complexity:
 | Operation | Average Case | Worst Case |
 |-----------|------------|------------|
 | Insert    | O(log n)   | O(n)       |
 | Search    | O(log n)   | O(n)       |
 | Delete    | O(log n)   | O(n)       |
+
+### ✅ Pros & Cons:
+| Pros | Cons |
+|------|------|
+| Hierarchical structure | Tree balancing is complex |
+| Used in databases and file systems | Insertion and deletion can be expensive |
 
 ---
 
@@ -173,21 +145,27 @@ A collection of **nodes (vertices)** connected by **edges**.
 
 ### 📌 Implementation:
 ```python
-# Graph using adjacency list
-graph = {
-    'A': ['B', 'C'],
-    'B': ['A', 'D'],
-    'C': ['A', 'D'],
-    'D': ['B', 'C']
-}
+from collections import defaultdict
+
+graph = defaultdict(list)
+graph['A'].append('B')
+graph['A'].append('C')
+graph['B'].append('A')
+graph['B'].append('D')
 ```
 
-### ⏳ Time Complexity:
+### ⌛ Time Complexity:
 | Operation | Adjacency List | Adjacency Matrix |
 |-----------|---------------|-----------------|
 | Add Edge  | O(1)          | O(1)            |
 | Remove Edge | O(1)        | O(1)            |
 | Search    | O(V + E)      | O(V²)           |
+
+### ✅ Pros & Cons:
+| Pros | Cons |
+|------|------|
+| Useful for modeling networks | More complex than trees |
+| Efficient pathfinding algorithms (Dijkstra, A*) | Traversal can be costly |
 
 ---
 
@@ -198,3 +176,8 @@ graph = {
 - **Use Queues/Stacks** when order matters.
 
 ---
+
+## 📄 Recommended Books:
+- **"Data Structures and Algorithms in Python" by Michael T. Goodrich**
+- **"Algorithms, Part I & II" by Robert Sedgewick**
+- **"Introduction to Algorithms" by Cormen et al. (CLRS)**
