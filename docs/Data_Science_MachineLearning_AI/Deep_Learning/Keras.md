@@ -1,3 +1,4 @@
+
 # 🤖 Keras Comprehensive Cheatsheet
 
 ## 🔹 Introduction
@@ -9,7 +10,9 @@ Keras is a **high-level deep learning API** that runs on top of **TensorFlow**, 
 ```sh
 # Install Keras (via TensorFlow)
 pip install tensorflow
+```
 
+```python
 # Import Keras
 from tensorflow import keras
 ```
@@ -17,7 +20,8 @@ from tensorflow import keras
 ---
 
 ## 🔹 Building a Neural Network
-### ✅ Define a Sequential Model
+
+### ✅ Sequential API
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Flatten
@@ -29,6 +33,23 @@ model = Sequential([
 ])
 ```
 
+### ✅ Functional API (Recommended for Complex Models)
+```python
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense
+
+inputs = Input(shape=(10,))
+x = Dense(64, activation='relu')(inputs)
+x = Dense(32, activation='relu')(x)
+outputs = Dense(1, activation='sigmoid')(x)
+
+model = Model(inputs=inputs, outputs=outputs)
+```
+
+---
+
+## 🔹 Model Compilation, Training & Evaluation
+
 ### ✅ Compile the Model
 ```python
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
@@ -36,7 +57,6 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 
 ### ✅ Train the Model
 ```python
-# Generate dummy data
 import numpy as np
 X_train = np.random.rand(1000, 10)
 y_train = np.random.randint(2, size=1000)
@@ -44,17 +64,12 @@ y_train = np.random.randint(2, size=1000)
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 ```
 
----
-
-## 🔹 Model Evaluation & Predictions
+### ✅ Evaluate & Predict
 ```python
 X_test = np.random.rand(200, 10)
 y_test = np.random.randint(2, size=200)
 
-# Evaluate model
 model.evaluate(X_test, y_test)
-
-# Make predictions
 predictions = model.predict(X_test)
 ```
 
@@ -62,18 +77,27 @@ predictions = model.predict(X_test)
 
 ## 🔹 Saving & Loading Models
 ```python
-# Save model
 model.save("model.h5")
 
-# Load model
 from tensorflow.keras.models import load_model
 loaded_model = load_model("model.h5")
 ```
 
 ---
 
+## 🔹 Model Summary & Visualization
+```python
+model.summary()
+
+from tensorflow.keras.utils import plot_model
+plot_model(model, to_file="model_architecture.png", show_shapes=True)
+```
+
+---
+
 ## 🔹 Advanced Layers
-### ✅ Convolutional Layers (CNNs)
+
+### ✅ CNN Example
 ```python
 from tensorflow.keras.layers import Conv2D, MaxPooling2D
 
@@ -86,25 +110,42 @@ model = Sequential([
 ])
 ```
 
-### ✅ Recurrent Layers (RNNs)
+### ✅ RNN Example
 ```python
 from tensorflow.keras.layers import SimpleRNN, LSTM
 
 model = Sequential([
-    SimpleRNN(50, activation='relu', return_sequences=True, input_shape=(100, 1)),
-    LSTM(50, activation='relu'),
+    SimpleRNN(50, return_sequences=True, input_shape=(100, 1)),
+    LSTM(50),
     Dense(1, activation='sigmoid')
 ])
 ```
 
 ---
 
-## 🔹 Callbacks & Early Stopping
-```python
-from tensorflow.keras.callbacks import EarlyStopping
+## 🔹 Callbacks
 
-callback = EarlyStopping(monitor='val_loss', patience=3)
-model.fit(X_train, y_train, epochs=50, batch_size=32, validation_split=0.2, callbacks=[callback])
+### ✅ EarlyStopping & ModelCheckpoint
+```python
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+
+early_stop = EarlyStopping(monitor='val_loss', patience=3)
+checkpoint = ModelCheckpoint("best_model.h5", save_best_only=True)
+
+model.fit(X_train, y_train, validation_split=0.2, epochs=50, callbacks=[early_stop, checkpoint])
+```
+
+---
+
+## 🔹 Preprocessing
+
+### ✅ Normalization
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 ```
 
 ---
@@ -126,11 +167,50 @@ tuner.search(X_train, y_train, epochs=10, validation_split=0.2)
 
 ---
 
-## 🔹 Best Practices
-- **Use `relu` for hidden layers** and `softmax` or `sigmoid` for output layers.
-- **Normalize input data** for better convergence.
-- **Use Dropout layers** to prevent overfitting.
-- **Use EarlyStopping** to avoid unnecessary training epochs.
-- **Perform hyperparameter tuning** for better model performance.
+## 🔹 Custom Components
+
+### ✅ Custom Loss
+```python
+import tensorflow.keras.backend as K
+
+def custom_mse(y_true, y_pred):
+    return K.mean(K.square(y_pred - y_true))
+```
+
+### ✅ Custom Metric
+```python
+from tensorflow.keras.metrics import AUC
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy', AUC()])
+```
 
 ---
+
+## 🔹 tf.data Input Pipeline
+```python
+import tensorflow as tf
+
+dataset = tf.data.Dataset.from_tensor_slices((X_train, y_train))
+dataset = dataset.shuffle(buffer_size=1024).batch(32)
+```
+
+---
+
+## 🔹 Best Practices
+- Use **ReLU** for hidden layers and **Sigmoid/Softmax** for outputs.
+- Normalize input data.
+- Use **Dropout** to prevent overfitting.
+- Use **EarlyStopping + ModelCheckpoint** together.
+- Tune hyperparameters with **Keras Tuner**.
+- Visualize model and training metrics.
+- Set random seed for reproducibility.
+
+---
+
+## 🔹 Final Notes
+Keras is ideal for both prototyping and production-grade deep learning. Combine it with TensorFlow tools for more flexibility and power.
+
+🎯 Explore:
+- Functional API for custom architectures
+- `tf.data` for performance input pipelines
+- Custom callbacks, layers, and metrics
