@@ -1,143 +1,228 @@
+
 # 🔥 PyTorch Comprehensive Cheatsheet
 
 ## 🔹 Introduction
-PyTorch is an **open-source deep learning framework** that provides **tensor computation and automatic differentiation** for AI and deep learning applications.
+**PyTorch** is an open-source deep learning framework known for its **flexibility, dynamic computation graph**, and strong GPU acceleration. It supports everything from **tensor operations** to **complex neural networks**.
 
 ---
 
-## 🔹 Installing PyTorch
+## 🔹 Installation
 ```sh
-# Install PyTorch with pip
 pip install torch torchvision torchaudio
-
-# Import PyTorch
+```
+```python
 import torch
 print(torch.__version__)
 ```
 
 ---
 
-## 🔹 Creating Tensors
+## 🔹 Tensors: Creation & Initialization
 ```python
-# Create a scalar tensor
-tensor_a = torch.tensor(5)
+# Scalar
+a = torch.tensor(5)
 
-# Create a vector tensor
-tensor_b = torch.tensor([1, 2, 3, 4])
+# Vector
+b = torch.tensor([1, 2, 3])
 
-# Create a matrix tensor
-tensor_c = torch.tensor([[1, 2], [3, 4]])
+# Matrix
+c = torch.tensor([[1, 2], [3, 4]])
 ```
 
-### ✅ Random Tensors
+### ✅ Useful Initializers
 ```python
-# Random tensor of size (3,3)
-torch.rand(3,3)
-
-# Tensor filled with zeros
-torch.zeros(2,2)
-
-# Tensor filled with ones
-torch.ones(2,2)
+torch.zeros(2, 3)
+torch.ones(2, 3)
+torch.rand(2, 3)
+torch.eye(3)              # Identity matrix
+torch.arange(0, 10, 2)    # Like np.arange
+torch.linspace(0, 1, 5)   # Evenly spaced values
 ```
 
 ---
 
 ## 🔹 Tensor Operations
 ```python
-# Element-wise addition, multiplication
-tensor_sum = tensor_a + tensor_b
-tensor_prod = tensor_a * tensor_b
+# Element-wise ops
+x = torch.tensor([1, 2])
+y = torch.tensor([3, 4])
+x + y, x * y, x ** 2
 
 # Matrix multiplication
-mat_a = torch.tensor([[1, 2], [3, 4]])
-mat_b = torch.tensor([[5, 6], [7, 8]])
-mat_mult = torch.matmul(mat_a, mat_b)
+A = torch.tensor([[1, 2], [3, 4]])
+B = torch.tensor([[5, 6], [7, 8]])
+torch.matmul(A, B)
+
+# Common ops
+x.mean(), x.sum()
+torch.cat((x, y), dim=0)
 ```
 
 ---
 
-## 🔹 Moving Tensors to GPU
+## 🔹 Tensor Manipulations
 ```python
-# Check for GPU availability
-device = "cuda" if torch.cuda.is_available() else "cpu"
-
-# Move tensor to GPU
-tensor_gpu = torch.tensor([1, 2, 3]).to(device)
+x = torch.rand(2, 3)
+x.shape
+x.view(3, 2)             # reshape
+x.unsqueeze(0)           # add dimension
+x.squeeze()              # remove dimensions of size 1
 ```
 
 ---
 
-## 🔹 Building a Neural Network
-### ✅ Define a Neural Network Model
+## 🔹 GPU Acceleration
+```python
+device = "cuda" if torch.cuda.is_available() else "cpu"
+torch.manual_seed(42)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed(42)
+
+tensor = torch.randn(2, 2).to(device)
+model.to(device)
+```
+
+---
+
+## 🔹 Autograd & Gradients
+```python
+x = torch.randn(3, requires_grad=True)
+y = x ** 2
+z = y.sum()
+z.backward()
+print(x.grad)  # Gradient of z w.r.t x
+```
+
+---
+
+## 🔹 Neural Network (nn.Module)
 ```python
 import torch.nn as nn
 import torch.optim as optim
 
-class NeuralNetwork(nn.Module):
+class Net(nn.Module):
     def __init__(self):
-        super(NeuralNetwork, self).__init__()
-        self.layer1 = nn.Linear(10, 64)
-        self.layer2 = nn.Linear(64, 1)
-        self.activation = nn.ReLU()
+        super().__init__()
+        self.linear1 = nn.Linear(10, 64)
+        self.relu = nn.ReLU()
+        self.linear2 = nn.Linear(64, 1)
 
     def forward(self, x):
-        x = self.activation(self.layer1(x))
-        x = self.layer2(x)
-        return x
+        x = self.relu(self.linear1(x))
+        return self.linear2(x)
 
-model = NeuralNetwork()
+model = Net()
 ```
 
-### ✅ Define Loss & Optimizer
+### ✅ nn.Sequential (Quick Model)
 ```python
-loss_function = nn.MSELoss()
+model = nn.Sequential(
+    nn.Linear(10, 64),
+    nn.ReLU(),
+    nn.Linear(64, 1)
+)
+```
+
+---
+
+## 🔹 Loss Function & Optimizer
+```python
+criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 ```
 
 ---
 
-## 🔹 Training a Model
+## 🔹 Training Loop
 ```python
 X_train = torch.rand((100, 10))
 y_train = torch.rand((100, 1))
 
+model.train()
 for epoch in range(10):
     optimizer.zero_grad()
-    predictions = model(X_train)
-    loss = loss_function(predictions, y_train)
+    output = model(X_train)
+    loss = criterion(output, y_train)
     loss.backward()
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # Gradient Clipping
     optimizer.step()
-    print(f"Epoch {epoch+1}, Loss: {loss.item()}")
+    print(f"Epoch {epoch+1}, Loss: {loss.item():.4f}")
 ```
 
 ---
 
-## 🔹 Model Evaluation & Predictions
+## 🔹 Evaluation & Inference
 ```python
 X_test = torch.rand((20, 10))
-predictions = model(X_test)
+
+model.eval()
+with torch.no_grad():
+    preds = model(X_test.to(device)).cpu()  # Ensure result on CPU
+    print(preds.shape)  # Debugging output shape
 ```
 
 ---
 
-## 🔹 Saving & Loading Models
+## 🔹 Save & Load Model
 ```python
-# Save the model
-torch.save(model.state_dict(), "model.pth")
+# Save only weights
+torch.save(model.cpu().state_dict(), "model.pth")
 
-# Load the model
+# Load model
 model.load_state_dict(torch.load("model.pth"))
 model.eval()
 ```
 
 ---
 
-## 🔹 Best Practices
-- **Use `.to(device)`** to move models and tensors to GPU for faster computations.
-- **Normalize input data** for better training stability.
-- **Use `.detach()` on tensors** to prevent unwanted gradient tracking.
-- **Set random seeds (`torch.manual_seed`)** for reproducibility.
-- **Use DataLoaders (`torch.utils.data.DataLoader`)** for efficient batch processing.
+## 🔹 Datasets & Dataloaders
+```python
+from torch.utils.data import Dataset, DataLoader, TensorDataset
+
+# From tensors
+dataset = TensorDataset(X_train, y_train)
+loader = DataLoader(dataset, batch_size=16, shuffle=True)
+
+# Custom dataset
+class MyDataset(Dataset):
+    def __init__(self, X, y):
+        self.X, self.y = X, y
+    def __len__(self):
+        return len(self.X)
+    def __getitem__(self, idx):
+        return self.X[idx], self.y[idx]
+
+loader = DataLoader(MyDataset(X_train, y_train), batch_size=32)
+```
 
 ---
+
+## 🔹 Best Practices ✅
+- Always `.to(device)` for models and tensors when using CUDA.
+- Use `model.eval()` + `torch.no_grad()` during evaluation.
+- Set seeds: `torch.manual_seed(42)` and `torch.cuda.manual_seed(42)` for reproducibility.
+- Use `detach()` to remove tensors from the autograd graph:
+```python
+y = model(X_train)
+y_detached = y.detach()
+```
+- Wrap training code with `try/except` for clean interruptions.
+- Prefer using `DataLoader` for better batching and shuffling.
+- Print model parameters:
+```python
+for name, param in model.named_parameters():
+    print(name, param.shape)
+```
+
+---
+
+## 🔹 Bonus Tips
+- Use `torchvision.transforms` for image data augmentation.
+- Use `nn.Sequential()` for simpler model definitions.
+- Use `Gradient Clipping` to prevent exploding gradients.
+- Monitor training with tools like `TensorBoard` or `Weights & Biases`.
+- Print model summary (requires `torchsummary`):
+```python
+from torchsummary import summary
+summary(model, input_size=(10,))
+```
